@@ -1,0 +1,58 @@
+body{
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+section{
+    margin-top: 50px;
+    height: 100%;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.client, .mesaging, .sales, .campaign {
+    height: 70vh;
+    width: 23% ;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.buble1, .buble2, .buble3, .buble4{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+.img1, .img2, .img3, .img4{
+ position: relative;
+}
+h1{
+    text-align: center;
+    margin: auto;
+}
+p{
+    text-align: center;
+    margin: auto;
+}
+.client {
+background-color: aqua;
+}
+.mesaging {
+    background-color: blue;
+}
+.sales {
+    background-color: red;
+}
+.campaign {
+    background-color: grey;
+}

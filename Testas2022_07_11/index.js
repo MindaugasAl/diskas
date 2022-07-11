@@ -1,3 +1,4 @@
+const grauztukai = new Map();
 class Vaisiai {
   constructor() {
     this.dydis = Math.floor(Math.random() * (25 - 5 + 1)) + 5;
@@ -8,12 +9,13 @@ class Vaisiai {
     this.prakasti = prakastas;
   }
   getPrakastas() {
-    return (this.prakastas = true);
+    this.prakastas = true;
+    return this;
   }
 }
 
-const vaisius = new Vaisiai();
-vaisius.getPrakastas();
+// const vaisius = new Vaisiai();
+// vaisius.getPrakastas();
 // console.log(vaisius);
 
 class Krepsys {
@@ -27,13 +29,13 @@ class Krepsys {
     return this;
   }
   static isimti() {
-    return this.vaisiai.shift();
+    let isimtasVaisius = Krepsys.vaisiai.shift();
+    isimtasVaisius.getPrakastas();
+    grauztukai.set(isimtasVaisius.id, isimtasVaisius);
+    return this;
   }
 }
-// const grauztukai = new Map();
-// console.log(grauztukai);
-//
-// console.log("eiline nesekme");
+
 Krepsys.pripildyti();
 console.log(Krepsys);
 Krepsys.isimti();
@@ -49,7 +51,8 @@ Krepsys.isimti();
 Krepsys.isimti();
 Krepsys.isimti();
 console.log(Krepsys);
+console.log(grauztukai);
 Krepsys.pripildyti();
 console.log(Krepsys);
 
-// console.log(grauztukai);
+console.log(grauztukai);

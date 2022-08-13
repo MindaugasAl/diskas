@@ -1,0 +1,18 @@
+<div class="sindikatas"><form method="post">
+
+  </form>
+  <ul>
+    {{#each songs}}
+      <div class="table">
+        <li>
+          <strong> #{{id}}</strong>
+          <span>{{song_Name}}</span>
+          <span>{{song_Album}}</span>
+          <button>
+            <a href="/delete/{{id}}">Istrinti</a>
+          </button>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+</div>

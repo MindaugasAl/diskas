@@ -8,7 +8,7 @@ const log = document.querySelector("#info");
 function my() {
   return `Aš esu ${myName} ${mySecondName}. Man yra ${
     thisYear - birthDay
-  } metaų`;
+  } metų`;
 }
 my();
 
